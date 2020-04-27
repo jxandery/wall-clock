@@ -1,4 +1,3 @@
-require 'pry'
 require 'ostruct'
 
 class TimeZoneController < ApplicationController
