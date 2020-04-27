@@ -1,0 +1,27 @@
+<h1 style="padding: 0 0 0 150px">24 Hour Time Zones</h1>
+
+<p style="font-size:100px; padding: 0 0 0 125px"><%= @selected_time_zone.local%></p>
+<p style="font-size:30px; padding: 0 0 0 100px"><%= @selected_time_zone.name %></p>
+
+<table style="margin: 50px">
+  <thead>
+    <tr>
+      <th>Zone</th>
+      <th>Time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @time_zones.each do |zone| %>
+      <tr>
+        <td><%= zone.name %></td>
+        <td style="padding: 0 50px 0 50px"><%= zone.local %></td>
+        <td><%= link_to "Get Current Time", time_zone_index_path(zone.name) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
